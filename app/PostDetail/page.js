@@ -51,14 +51,12 @@ export default function PostDetail() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <div className="w-full md:w-3/4 lg:w-1/2 mx-auto mt-2 px-4 md:px-0">
-        <div className="flex items-center">
-         
-        </div>
+        <div className="flex items-center"></div>
         <h1 className="text-6xl font-bold mb-4 text-center leading-normal">
           {title}
         </h1>
         <p className="mb-4 opacity-70 text-lg leading-relaxed mt-4">
-          "Finding Inspiration in Everyday Moments" explores the concept of
+          &quotFinding Inspiration in Everyday Moments&quot explores the concept of
           discovering creativity and motivation in the mundane aspects of daily
           life. This title suggests that inspiration is not limited to grand
           events or extraordinary circumstances but can be found in the ordinary
