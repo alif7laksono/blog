@@ -7,12 +7,14 @@ export default function Newsletter() {
         <h1 className="text-4xl font-bold mb-2">
           Subscribe to Porto newsletter and stay updated.
         </h1>
-        <p className="mb-2 text-lg">
-          Don't miss anything. Get all the latest posts delivered straight to
-          your inbox. It's free!
+        <p className="text-gray-600 text-center w-3/4 mx-auto">
+          No worries, it happens to the best of us. Enter your email address
+          below and we&apos;ll send you instructions on how to reset your
+          password.
         </p>
-        <p className="text-sm opacity-70">
-          We respect your privacy. Unsubscribe at any time.
+
+        <p className="text-gray-600 text-center w-3/4 mx-auto">
+          Don&apos;t worry, we&apos;ll help you get back on track.
         </p>
       </div>
       <div className="w-full md:w-1/2 lg:w-2/5">

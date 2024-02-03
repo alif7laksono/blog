@@ -8,6 +8,7 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Footer() {
   const links = [
@@ -30,10 +31,12 @@ export default function Footer() {
       <div className="w-full md:w-4/5 lg:w-3/4 mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="flex flex-col items-center md:items-start">
           <Link href="/">
-            <img
-              src="./images/logo-white.png"
+            <Image
+              src="/images/logo-white.png"
               alt="Logo Image"
-              className="w-64 h-auto cursor-pointer"
+              width={180}
+              height={50}
+              className="w-56 h-auto cursor-pointer"
             />
           </Link>
           <p className="mt-2 text-white text-center md:text-left opacity-80">

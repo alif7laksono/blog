@@ -31,7 +31,8 @@ export default function Forgot() {
           </h1>
           <p className="text-gray-600 text-center w-3/4 mx-auto">
             No worries, it happens to the best of us. Enter your email address
-            below and we'll send you instructions on how to reset your password.
+            below and we&apos;ll send you instructions on how to reset your
+            password.
           </p>
           <form
             onSubmit={handleSubmit}

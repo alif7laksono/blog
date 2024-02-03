@@ -228,9 +228,11 @@ export default function PostDetail() {
                 className="mb-4 p-4 rounded-md  shadow flex items-start"
               >
                 <div>
-                  <img
+                  <Image
                     src={comment.image}
                     alt={comment.author}
+                    width={800}
+                    height={500}
                     className="w-12 h-12 rounded-full"
                   />
                 </div>

@@ -13,6 +13,7 @@ import Forgot from "../auth/Forgot";
 import Register from "../auth/Register";
 import Link from "next/link";
 import "./module.styles.css";
+import Image from "next/image";
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -53,10 +54,12 @@ export default function Header() {
       {" "}
       <div className="">
         <Link href="/">
-          <img
-            src="./images/logo-white.png"
-            alt="Mezzaluna"
-            className="cursor-pointer w-44 h-auto"
+          <Image
+            src="/images/logo-white.png"
+            alt="Logo Image"
+            width={180}
+            height={50}
+            className="w-56 h-auto cursor-pointer"
           />
         </Link>
       </div>
@@ -133,10 +136,12 @@ export default function Header() {
           >
             <div className="flex justify-between items-center mb-2">
               <Link href="/" className="">
-                <img
-                  src="./images/logo-white.png"
-                  alt="Mezzaluna"
-                  className="uppercase font-semibold cursor-pointer w-44 h-auto"
+                <Image
+                  src="/images/logo-white.png"
+                  alt="Logo Image"
+                  width={180}
+                  height={50}
+                  className="w-56 h-auto cursor-pointer"
                 />
               </Link>
               <button
