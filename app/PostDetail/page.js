@@ -39,7 +39,7 @@ const quotes = [
     by: "Winston Churchill",
   },
   {
-    quote: "Believe you can and you're halfway there.",
+    quote: "Believe you can and you&apos;re halfway there.",
     by: "Theodore Roosevelt",
   },
 ];
@@ -96,13 +96,13 @@ export default function PostDetail() {
               become an opportunity to find beauty in the everyday. Pay
               attention to the little details - the way the sunlight filters
               through the trees, the sound of birds chirping in the distance -
-              and you'll discover a world of inspiration waiting to be explored.
+              and you&apos;ll discover a world of inspiration waiting to be explored.
             </p>
             <p>
-              So, the next time you're feeling stuck or uninspired, remember
-              that inspiration is all around you. Whether it's in the natural
+              So, the next time you&apos;re feeling stuck or uninspired, remember
+              that inspiration is all around you. Whether it&apos;s in the natural
               world, the people you meet, or the everyday moments you
-              experience, there's beauty to be found everywhere you look. All
+              experience, there&apos;s beauty to be found everywhere you look. All
               you have to do is open your eyes and heart to it.
             </p>
           </div>
@@ -125,7 +125,7 @@ export default function PostDetail() {
           <div>
             <p>
               Life is filled with moments - some big, some small, but all
-              significant in their own way. It's easy to get caught up in the
+              significant in their own way. It&apos;s easy to get caught up in the
               hustle and bustle of daily life and overlook the beauty that
               surrounds us. However, if we take the time to pause and appreciate
               the world around us, we can find inspiration in the most
@@ -143,10 +143,10 @@ export default function PostDetail() {
           <div>
             <p>
               Another source of inspiration can be found in the people we
-              encounter every day. Whether it's a kind gesture from a stranger
+              encounter every day. Whether it&apos;s a kind gesture from a stranger
               or a heartfelt conversation with a loved one, human connections
               have the power to uplift and inspire us. Take the time to listen
-              to others' stories, and you may find yourself inspired by their
+              to others&apos; stories, and you may find yourself inspired by their
               resilience, compassion, and strength.
             </p>
           </div>
