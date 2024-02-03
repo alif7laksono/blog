@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Posts from "../../db/Posts";
+import Image from "next/image";
 
 export default function Blog() {
   const [visible, setVisible] = useState(6);
@@ -21,10 +22,11 @@ export default function Blog() {
             key={index}
             className="rounded-md transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:bg-sky-900 hover:text-white p-4 flex flex-col"
           >
-            <img
+            <Image
               src={post.images}
               alt={post.title}
-              style={{ objectFit: "cover", width: "100%", height: "200px" }}
+              width={800}
+              height={200}
             />
             <div className="flex-grow">
               <h2 className="text-2xl font-bold mb-2 line-clamp-2">

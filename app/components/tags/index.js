@@ -1,5 +1,6 @@
 import React from "react";
 import Tags from "../../db/Tags";
+import Image from "next/image";
 
 const TagComponent = () => {
   return (
@@ -12,12 +13,16 @@ const TagComponent = () => {
               key={tag.id}
               className="flex items-center px-4 py-2 rounded-md transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:bg-sky-900 cursor-pointer"
             >
-              <img
-                src={tag.image}
-                alt={tag.name}
-                className="w-12 h-12 rounded-full transform hover:scale-110 transition-transform duration-200"
-              />
-              <div className="ml-3">
+              {/* <div className="relative overflow-hidden">
+                <Image
+                  src={tag.image}
+                  alt={tag.name}
+                  width={64}
+                  height={64}
+                  className="rounded-full w-64 h-auto "
+                />
+              </div> */}
+              <div className=" text-center">
                 <h2 className="font-semibold text-sm capitalize">{tag.name}</h2>
               </div>
             </div>

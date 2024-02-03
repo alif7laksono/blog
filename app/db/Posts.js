@@ -9,7 +9,8 @@ const Posts = [
     category: "Inspiration",
     tags: ["inspiration"],
     date: "2024-01-30",
-    images: ["/images/posts/inspiration/image-1.jpg"],
+    images: "/images/posts/inspiration/image-1.jpg",
+    alt: "Description of the image",
     time: "3 mins read",
   },
   {
@@ -21,7 +22,8 @@ const Posts = [
     category: "Inspiration",
     tags: ["inspiration"],
     date: "2024-01-29",
-    images: ["/images/posts/inspiration/image-2.jpg"],
+    images: "/images/posts/inspiration/image-2.jpg",
+    alt: "Description of the image",
     time: "3 mins read",
   },
   // Nature Posts
@@ -34,7 +36,9 @@ const Posts = [
     category: "Nature",
     tags: ["nature"],
     date: "2024-01-28",
-    images: ["/images/posts/nature/image-1.jpg"],
+    images: "/images/posts/nature/image-1.jpg",
+    alt: "Description of the image",
+
     time: "3 mins read",
   },
   {
@@ -46,7 +50,9 @@ const Posts = [
     category: "Nature",
     tags: ["nature"],
     date: "2024-01-29",
-    images: ["/images/posts/nature/image-2.jpg"],
+    images: "/images/posts/nature/image-2.jpg",
+    alt: "Description of the image",
+
     time: "3 mins read",
   },
 
@@ -61,7 +67,9 @@ const Posts = [
     category: "Health",
     tags: ["health"],
     date: "2024-01-29",
-    images: ["/images/posts/health/image-1.jpg"],
+    images: "/images/posts/health/image-1.jpg",
+    alt: "Description of the image",
+
     time: "3 mins read",
   },
   {
@@ -72,7 +80,9 @@ const Posts = [
     category: "Health",
     tags: ["health"],
     date: "2024-01-25",
-    images: ["images/posts/health/image-2.jpg"],
+    images: "/images/posts/health/image-2.jpg",
+    alt: "Description of the image",
+
     time: "5 mins read",
   },
 
@@ -85,7 +95,9 @@ const Posts = [
     category: "Lifestyle",
     tags: ["lifestyle"],
     date: "2024-01-30",
-    images: ["images/posts/lifestyle/image-1.jpg"],
+    images: "/images/posts/lifestyle/image-1.jpg",
+    alt: "Description of the image",
+    time: "5 mins read",
   },
   {
     id: "li-2",
@@ -95,7 +107,9 @@ const Posts = [
     category: "Lifestyle",
     tags: ["lifestyle"],
     date: "2024-01-30",
-    images: ["images/posts/lifestyle/image-2.jpg"],
+    images: "/images/posts/lifestyle/image-2.jpg",
+    alt: "Description of the image",
+    time: "5 mins read",
   },
 
   // Travel Posts
@@ -107,7 +121,9 @@ const Posts = [
     category: "Travel",
     tags: ["travel"],
     date: "2024-01-30",
-    images: ["images/posts/travel/image-1.jpg"],
+    images: "/images/posts/travel/image-1.jpg",
+    alt: "Description of the image",
+    time: "5 mins read",
   },
   {
     id: "tr-2",
@@ -117,7 +133,8 @@ const Posts = [
     category: "Travel",
     tags: ["travel"],
     date: "2024-01-30",
-    images: ["/images/posts/travel/image-2.jpg"],
+    images: "/images/posts/travel/image-2.jpg",
+    alt: "Description of the image",
     time: "3 mins read",
   },
 
@@ -130,8 +147,10 @@ const Posts = [
     category: "Food",
     tags: ["food"],
     date: "2024-01-30",
-    images: ["/images/posts/food/image-1.jpg"],
+    images: "/images/posts/food/image-1.jpg",
     time: "3 mins read",
+    alt: "Description of the image",
+    time: "5 mins read",
   },
   {
     id: "fo-2",
@@ -141,8 +160,10 @@ const Posts = [
     category: "Food",
     tags: ["food"],
     date: "2024-01-30",
-    images: ["/images/posts/food/image-2.jpg"],
+    images: "/images/posts/food/image-2.jpg",
     time: "3 mins read",
+    alt: "Description of the image",
+    time: "5 mins read",
   },
 
   // technology posts
@@ -154,19 +175,9 @@ const Posts = [
     category: "Technology",
     tags: ["technology"],
     date: "2024-01-30",
-    images: ["/images/posts/technology/image-1.jpg"],
-    time: "3 mins read",
-  },
-  {
-    id: "te-2",
-    title: "How to Build a PC",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    author: "John Doe",
-    category: "Technology",
-    tags: ["technology"],
-    date: "2024-01-30",
-    images: ["/images/posts/technology/image-2.jpg"],
-    time: "3 mins read",
+    images: "/images/posts/technology/image-1.jpg",
+    alt: "Description of the image",
+    time: "5 mins read",
   },
 ];
 

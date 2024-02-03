@@ -1,6 +1,7 @@
 import React from "react";
 import { FaRegCalendarAlt, FaRegClock } from "react-icons/fa";
 import Posts from "../../db/Posts";
+import Image from "next/image";
 
 export default function Featured() {
   const mainPost = Posts[0];
@@ -10,10 +11,13 @@ export default function Featured() {
     <section className="flex flex-col md:flex-row w-full md:w-4/5 lg:w-3/4 mx-auto py-5">
       <div className="w-full md:w-1/2 lg:w-1/2 h-full px-2 rounded-md transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:bg-sky-900">
         <div className="rounded-lg overflow-hidden p-2">
-          <img
+          <Image
             src={mainPost.images}
             alt={mainPost.title}
+            width={700}
+            height={500}
             className="cursor-pointer"
+            priority="true"
           />
           <div className="md:py-4 py-2 ">
             <h2 className="font-bold text-3xl cursor-pointer">
@@ -39,7 +43,13 @@ export default function Featured() {
             className="flex mb-2 p-2 rounded-md transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:bg-sky-900 cursor-pointer w-full items-center"
           >
             <div className="w-1/3 cursor-pointer">
-              <img src={post.images} alt={post.title} className="rounded-lg" />
+              <Image
+                src={post.images}
+                alt={post.title}
+                width={700}
+                height={500}
+                className="cursor-pointer"
+              />
             </div>
             <div className="w-2/3 px-4">
               <p className="text-sm text-gray-500 cursor-pointer">

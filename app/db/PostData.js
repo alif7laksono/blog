@@ -6,11 +6,10 @@ const PostData = [
       "Discover how to find inspiration and beauty in the ordinary moments of life.",
     author: "Grace Williams",
     dateTime: "February 2, 2024",
-    images: [
-      "/images/posts/technology/image-1.jpg",
-      "/images/posts/nature/image-2.jpg",
-      "/images/posts/lifestyle/image-2.jpg",
-    ],
+    image1: "/images/posts/technology/image-1.jpg",
+    image2: "/images/posts/nature/image-2.jpg",
+    image3: "/images/posts/lifestyle/image-2.jpg",
+
     category: "inspiration",
     time: "3 mins read",
     content: `

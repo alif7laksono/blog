@@ -12,43 +12,45 @@ import {
   FaPinterest,
   FaLink,
 } from "react-icons/fa";
-import RelatedPosts from "../components/related";
+// import RelatedPosts from "../components/related";
+import Image from "next/image";
+
+const {
+  title,
+  description,
+  author,
+  dateTime,
+  image1,
+  image2,
+  image3,
+  comments,
+  category,
+  time,
+} = PostData[0];
+
+const quotes = [
+  {
+    quote: "The only way to do great work is to love what you do.",
+    by: "Steve Jobs",
+  },
+  {
+    quote:
+      "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    by: "Winston Churchill",
+  },
+  {
+    quote: "Believe you can and you're halfway there.",
+    by: "Theodore Roosevelt",
+  },
+];
 
 export default function PostDetail() {
   const [replyClicked, setReplyClicked] = useState(null);
-  const {
-    title,
-    description,
-    author,
-    dateTime,
-    images,
-    content,
-    content2,
-    comments,
-    category,
-    time,
-  } = PostData[0];
-
-  const quotes = [
-    {
-      quote: "The only way to do great work is to love what you do.",
-      by: "Steve Jobs",
-    },
-    {
-      quote:
-        "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-      by: "Winston Churchill",
-    },
-    {
-      quote: "Believe you can and you're halfway there.",
-      by: "Theodore Roosevelt",
-    },
-  ];
 
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="w-full md:w-3/4 lg:w-1/2 mx-auto mt-2 px-4 md:px-0">
+      <div className="w-full md:w-3/4 lg:w-1/2 mx-auto mt-2 px-4 md:px-0">
         <div className="flex items-center">
           <p className="capitalize cursor-pointer rounded-lg px-3 py-1 text-sm transition-colors duration-200 gradient-button">
             {category}
@@ -58,10 +60,13 @@ export default function PostDetail() {
           {title}
         </h1>
         <div className="mb-4">
-          {images[1] && (
-            <img
-              src={images[1]}
+          {image1 && (
+            <Image
+              src="/images/posts/technology/image-1.jpg"
               alt={`${title} 2`}
+              width={800}
+              height={500}
+              priority={true}
               className="w-full h-74 object-cover rounded-lg"
             />
           )}
@@ -82,16 +87,33 @@ export default function PostDetail() {
             {description}
           </h4>
         </div>
-        <div
-          className="prose lg:prose-xl mb-4 opacity-70 text-lg leading-relaxed"
-          dangerouslySetInnerHTML={{
-            __html: content.replace(/<p[^>]*>|<\/p>/g, ""),
-          }}
-        ></div>
-        {images[0] && (
-          <img
-            src={images[0]}
-            alt={`${title} 1`}
+        <div className="prose lg:prose-xl mb-4 opacity-70 text-lg leading-relaxed">
+          <div>
+            <p>
+              Even the most mundane activities can spark inspiration if we
+              approach them with mindfulness and curiosity. Something as simple
+              as sipping a cup of coffee or taking a walk around the block can
+              become an opportunity to find beauty in the everyday. Pay
+              attention to the little details - the way the sunlight filters
+              through the trees, the sound of birds chirping in the distance -
+              and you'll discover a world of inspiration waiting to be explored.
+            </p>
+            <p>
+              So, the next time you're feeling stuck or uninspired, remember
+              that inspiration is all around you. Whether it's in the natural
+              world, the people you meet, or the everyday moments you
+              experience, there's beauty to be found everywhere you look. All
+              you have to do is open your eyes and heart to it.
+            </p>
+          </div>
+        </div>
+        {image2 && (
+          <Image
+            src="/images/posts/nature/image-2.jpg"
+            width={800}
+            height={500}
+            alt={`${title}`}
+            priority={true}
             className="w-full h-74 object-cover rounded-lg mt-4 mb-4"
           />
         )}
@@ -99,16 +121,44 @@ export default function PostDetail() {
           Images provided by <i>Unsplash</i>
         </p>
 
-        <div
-          className="prose lg:prose-xl mb-4 opacity-70 text-lg leading-relaxed mt-4"
-          dangerouslySetInnerHTML={{
-            __html: content2.replace(/<p[^>]*>|<\/p>/g, ""),
-          }}
-        ></div>
-        {images[0] && (
-          <img
-            src={images[2]}
+        <div className="prose lg:prose-xl mb-4 opacity-70 text-lg leading-relaxed mt-4">
+          <div>
+            <p>
+              Life is filled with moments - some big, some small, but all
+              significant in their own way. It's easy to get caught up in the
+              hustle and bustle of daily life and overlook the beauty that
+              surrounds us. However, if we take the time to pause and appreciate
+              the world around us, we can find inspiration in the most
+              unexpected places.
+            </p>
+            <p>
+              One of the simplest yet most profound sources of inspiration is
+              nature. Take a moment to step outside and breathe in the fresh
+              air. Look up at the sky and marvel at the colors of the sunset or
+              the dance of the clouds. Even in the midst of chaos, nature has a
+              way of grounding us and reminding us of the beauty of the world.
+            </p>
+          </div>
+          <br />
+          <div>
+            <p>
+              Another source of inspiration can be found in the people we
+              encounter every day. Whether it's a kind gesture from a stranger
+              or a heartfelt conversation with a loved one, human connections
+              have the power to uplift and inspire us. Take the time to listen
+              to others' stories, and you may find yourself inspired by their
+              resilience, compassion, and strength.
+            </p>
+          </div>
+          <br />
+        </div>
+        {image3 && (
+          <Image
+            src="/images/posts/lifestyle/image-2.jpg"
             alt={`${title} 1`}
+            width={800}
+            height={500}
+            priority={true}
             className="w-full h-74 object-cover rounded-lg mt-4 mb-4"
           />
         )}
@@ -202,8 +252,8 @@ export default function PostDetail() {
               </div>
             ))}
         </div>
-        <RelatedPosts />
-      </main>
+        {/* <RelatedPosts /> */}
+      </div>
       <Footer />
     </div>
   );
