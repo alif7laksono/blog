@@ -24,7 +24,7 @@ export default function Blog() {
             <img
               src={post.images}
               alt={post.title}
-              style={{ objectFit: "cover", width: "100%", height: "48px" }}
+              style={{ objectFit: "cover", width: "100%", height: "200px" }}
             />
             <div className="flex-grow">
               <h2 className="text-2xl font-bold mb-2 line-clamp-2">
