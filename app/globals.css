@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-image: linear-gradient(to right, #1f2c43, #0f1620);
+  color: #fff;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #009688, #00bcd4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-button {
+  background-image: linear-gradient(to right, #009688, #00bcd4);
+  color: #fff;
+  transition: background-image 0.5s ease;
+}
+
+.gradient-button:hover {
+  background-image: linear-gradient(to left, #009688, #00bcd4);
+}
+
+.gradient-button:active {
+  background-image: linear-gradient(to right, #009688, #00bcd4);
+}
+
+.newsletter {
+  background-image: linear-gradient(to right, #009688, #00bcd4);
+  color: #fff;
+}
