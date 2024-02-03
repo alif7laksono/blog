@@ -14,8 +14,8 @@ export default function Footer() {
   const links = [
     { href: "/", text: "Home" },
     { href: "/PostDetail", text: "Post Detail" },
-    { href: "/authors", text: "Authors" },
-    { href: "/category", text: "Category" },
+    { href: "/Author", text: "Authors" },
+    { href: "/Category", text: "Category" },
     { href: "/404", text: "404" },
   ];
 
@@ -39,19 +39,21 @@ export default function Footer() {
               className="w-56 h-auto cursor-pointer"
             />
           </Link>
-          <p className="mt-2 text-white text-center md:text-left opacity-80">
+          <p className="mt-2 text-center md:text-left text-gray-500">
             Welcome to Mezzaluna, a modern and sleek template for your website.
           </p>
 
           <div className="mt-4">
-            <h2 className="font-bold text-lg mb-2 opacity-80">Follow Us</h2>
+            <h2 className="font-bold text-lg mb-2 text-gray-500 text-center sm:text-left">
+              Follow Us
+            </h2>
             <div className="flex space-x-4">
               {socialIcons.map((social, index) => {
                 const { Icon } = social;
                 return (
                   <Icon
                     key={index}
-                    className="w-5 h-5 cursor-pointer opacity-80"
+                    className="w-5 h-5 cursor-pointer text-gray-500 hover:text-white"
                   />
                 );
               })}
@@ -65,7 +67,7 @@ export default function Footer() {
               <li key={index} className="mb-1">
                 <Link
                   href={link.href}
-                  className="text-gray-500 hover:text-black"
+                  className="text-gray-500 hover:text-white"
                 >
                   {link.text}
                 </Link>
@@ -75,7 +77,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col items-center md:items-start">
           <h2 className="font-bold text-lg mb-2">Contact Us</h2>
-          <p className="text-gray-500">
+          <p className="text-center md:text-left text-gray-500">
             1234 Street Name, City Name, United States
           </p>
           <p className="text-gray-500">+1 123 456 7890</p>
@@ -84,7 +86,7 @@ export default function Footer() {
       </div>
 
       <div className="w-full md:w-4/5 lg:w-3/4 mx-auto px-4 mb-2">
-        <span>
+        <span className="text-gray-500">
           © Mezzaluna 2024. By <b>Alif Laksono</b>
         </span>
       </div>

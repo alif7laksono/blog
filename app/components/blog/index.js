@@ -20,7 +20,7 @@ export default function Blog() {
         {Posts.slice(0, visible).map((post, index) => (
           <div
             key={index}
-            className="rounded-md transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:bg-sky-900 hover:text-white p-4 flex flex-col"
+            className="rounded-md bg-sky-950 bg-opacity-50 transform hover:scale-105 transition-transform duration-200 hover:text-white p-4 flex flex-col"
           >
             <Image
               src={post.images}
@@ -29,7 +29,7 @@ export default function Blog() {
               height={200}
             />
             <div className="flex-grow">
-              <h2 className="text-2xl font-bold mb-2 line-clamp-2">
+              <h2 className="text-2xl font-bold mb-2 line-clamp-2 mt-2">
                 {post.title}
               </h2>
               <p className="line-clamp-2 opacity-70 ">{post.content}</p>

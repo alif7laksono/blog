@@ -12,7 +12,7 @@ import {
   FaPinterest,
   FaLink,
 } from "react-icons/fa";
-// import RelatedPosts from "../components/related";
+import RelatedPosts from "../components/related";
 import Image from "next/image";
 
 const {
@@ -52,13 +52,26 @@ export default function PostDetail() {
       <Header />
       <div className="w-full md:w-3/4 lg:w-1/2 mx-auto mt-2 px-4 md:px-0">
         <div className="flex items-center">
-          <p className="capitalize cursor-pointer rounded-lg px-3 py-1 text-sm transition-colors duration-200 gradient-button">
-            {category}
-          </p>
+         
         </div>
         <h1 className="text-6xl font-bold mb-4 text-center leading-normal">
           {title}
         </h1>
+        <p className="mb-4 opacity-70 text-lg leading-relaxed mt-4">
+          "Finding Inspiration in Everyday Moments" explores the concept of
+          discovering creativity and motivation in the mundane aspects of daily
+          life. This title suggests that inspiration is not limited to grand
+          events or extraordinary circumstances but can be found in the ordinary
+          experiences that make up our day-to-day existence. The article may
+          delve into techniques for cultivating a mindset that allows
+          individuals to recognize and appreciate the beauty, insight, and
+          potential for innovation in the seemingly routine occurrences of life.
+          It could also offer practical tips or anecdotes to inspire readers to
+          seek out and embrace the hidden sources of inspiration that surround
+          them. Overall, the title hints at a narrative that celebrates the
+          power of mindfulness and perspective in uncovering inspiration in the
+          most unexpected places.
+        </p>
         <div className="mb-4">
           {image1 && (
             <Image
@@ -81,6 +94,7 @@ export default function PostDetail() {
           </span>
           <FiClock className="h-4 w-4 text-gray-500 mr-1" />
           <span>{time}</span>
+          <span className="ml-4 capitalize">{category}</span>
         </p>
         <div className="mb-4">
           <h4 className="text-3xl font-semibold leading-relaxed">
@@ -96,14 +110,15 @@ export default function PostDetail() {
               become an opportunity to find beauty in the everyday. Pay
               attention to the little details - the way the sunlight filters
               through the trees, the sound of birds chirping in the distance -
-              and you&apos;ll discover a world of inspiration waiting to be explored.
+              and you&apos;ll discover a world of inspiration waiting to be
+              explored.
             </p>
             <p>
-              So, the next time you&apos;re feeling stuck or uninspired, remember
-              that inspiration is all around you. Whether it&apos;s in the natural
-              world, the people you meet, or the everyday moments you
-              experience, there&apos;s beauty to be found everywhere you look. All
-              you have to do is open your eyes and heart to it.
+              So, the next time you&apos;re feeling stuck or uninspired,
+              remember that inspiration is all around you. Whether it&apos;s in
+              the natural world, the people you meet, or the everyday moments
+              you experience, there&apos;s beauty to be found everywhere you
+              look. All you have to do is open your eyes and heart to it.
             </p>
           </div>
         </div>
@@ -121,12 +136,12 @@ export default function PostDetail() {
           Images provided by <i>Unsplash</i>
         </p>
 
-        <div className="prose lg:prose-xl mb-4 opacity-70 text-lg leading-relaxed mt-4">
+        <div className="mb-4 opacity-70 text-lg leading-relaxed mt-4">
           <div>
             <p>
               Life is filled with moments - some big, some small, but all
-              significant in their own way. It&apos;s easy to get caught up in the
-              hustle and bustle of daily life and overlook the beauty that
+              significant in their own way. It&apos;s easy to get caught up in
+              the hustle and bustle of daily life and overlook the beauty that
               surrounds us. However, if we take the time to pause and appreciate
               the world around us, we can find inspiration in the most
               unexpected places.
@@ -143,11 +158,11 @@ export default function PostDetail() {
           <div>
             <p>
               Another source of inspiration can be found in the people we
-              encounter every day. Whether it&apos;s a kind gesture from a stranger
-              or a heartfelt conversation with a loved one, human connections
-              have the power to uplift and inspire us. Take the time to listen
-              to others&apos; stories, and you may find yourself inspired by their
-              resilience, compassion, and strength.
+              encounter every day. Whether it&apos;s a kind gesture from a
+              stranger or a heartfelt conversation with a loved one, human
+              connections have the power to uplift and inspire us. Take the time
+              to listen to others&apos; stories, and you may find yourself
+              inspired by their resilience, compassion, and strength.
             </p>
           </div>
           <br />
@@ -176,7 +191,7 @@ export default function PostDetail() {
         </div>
 
         <div className="mt-4 flex flex-col item space-y-4">
-          <h2 className="text-2xl text-gray-700">Share this post:</h2>
+          <h2 className="text-2xl">Share this post:</h2>
           <div className="flex space-x-4">
             <a
               href="https://www.facebook.com"
@@ -184,14 +199,14 @@ export default function PostDetail() {
               rel="noopener noreferrer"
               className=""
             >
-              <FaFacebookF className="text-gray-700 text-4xl hover:text-gray-300 transition duration-200" />
+              <FaFacebookF className="text-gray-700 text-3xl hover:text-gray-300 transition duration-200" />
             </a>
             <a
               href="https://www.twitter.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitter className="text-gray-700 text-4xl hover:text-gray-300 transition duration-200" />
+              <FaTwitter className="text-gray-700 text-3xl hover:text-gray-300 transition duration-200" />
             </a>
             <a
               href="https://www.instagram.com"
@@ -199,7 +214,7 @@ export default function PostDetail() {
               rel="noopener noreferrer"
               className="hover:text-gray-300 transition duration-200"
             >
-              <FaInstagram className="text-gray-700 text-4xl hover:text-gray-300 transition duration-200" />
+              <FaInstagram className="text-gray-700 text-3xl hover:text-gray-300 transition duration-200" />
             </a>
             <a
               href="https://www.pinterest.com"
@@ -207,14 +222,14 @@ export default function PostDetail() {
               rel="noopener noreferrer"
               className="hover:text-gray-300 transition duration-200"
             >
-              <FaPinterest className="text-gray-700 text-4xl hover:text-gray-300 transition duration-200" />
+              <FaPinterest className="text-gray-700 text-3xl hover:text-gray-300 transition duration-200" />
             </a>
             <a
               href="#"
               className="hover:text-gray-300 transition duration-200"
               title="Copy link"
             >
-              <FaLink className="text-gray-700 text-4xl hover:text-gray-300 transition duration-200" />
+              <FaLink className="text-gray-700 text-3xl hover:text-gray-300 transition duration-200" />
             </a>
           </div>
         </div>
@@ -254,7 +269,7 @@ export default function PostDetail() {
               </div>
             ))}
         </div>
-        {/* <RelatedPosts /> */}
+        <RelatedPosts />
       </div>
       <Footer />
     </div>

@@ -9,7 +9,8 @@ export default function Featured() {
 
   return (
     <section className="flex flex-col md:flex-row w-full md:w-4/5 lg:w-3/4 mx-auto py-5">
-      <div className="w-full md:w-1/2 lg:w-1/2 h-full px-2 rounded-md transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:bg-sky-900">
+      <div className="w-full md:w-1/2 lg:w-1/2 h-full px-2 duration-100 bg-sky-950 bg-opacity-50 transform hover:scale-105 transition-transform">
+        {" "}
         <div className="rounded-lg overflow-hidden p-2">
           <Image
             src={mainPost.images}
@@ -40,7 +41,7 @@ export default function Featured() {
         {sidePosts.map((post) => (
           <div
             key={post.id}
-            className="flex mb-2 p-2 rounded-md transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:bg-sky-900 cursor-pointer w-full items-center"
+            className="flex mb-2 p-2 rounded-md bg-sky-950 bg-opacity-50 cursor-pointer w-full items-center transform hover:scale-105 transition-transform duration-200"
           >
             <div className="w-1/3 cursor-pointer">
               <Image
