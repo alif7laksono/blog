@@ -1,6 +1,7 @@
 import React from "react";
 import Posts from "../../db/Posts";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function RelatedPosts() {
   return (
@@ -8,28 +9,30 @@ export default function RelatedPosts() {
       <h2 className="text-2xl font-bold mb-4">Posts You Might Like</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 md:p-0 ">
         {Posts.slice(0, 3).map((post, index) => (
-          <div
-            key={post.id}
-            className="cursor-pointer transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:text-white p-2 flex flex-col rounded-lg"
-          >
-            <div className="overflow-hidden h-48">
-              <Image
-                src={post.images}
-                alt=""
-                width={800}
-                height={200}
-                layout="responsive"
-                objectFit="cover"
-                className="rounded-lg hover:opacity-50"
-              />
+          <Link href="/PostDetail" rel="noopener noreferrer">
+            <div
+              key={post.id}
+              className="cursor-pointer transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:text-white p-2 flex flex-col rounded-lg"
+            >
+              <div className="overflow-hidden h-48">
+                <Image
+                  src={post.images}
+                  alt=""
+                  width={800}
+                  height={200}
+                  layout="responsive"
+                  objectFit="cover"
+                  className="rounded-lg hover:opacity-50"
+                />
+              </div>
+              <div className="flex-grow">
+                <h2 className="text-xl font-bold mb-2 mt-2 line-clamp-2 h-14 hover:transition ease-in-out duration-500 hover:opacity-50">
+                  {post.title}
+                </h2>
+                <p className="line-clamp-2 opacity-70 h-18">{post.content}</p>
+              </div>
             </div>
-            <div className="flex-grow">
-              <h2 className="text-xl font-bold mb-2 mt-2 line-clamp-2 h-14 hover:transition ease-in-out duration-500 hover:opacity-50">
-                {post.title}
-              </h2>
-              <p className="line-clamp-2 opacity-70 h-18">{post.content}</p>
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

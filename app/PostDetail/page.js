@@ -56,19 +56,19 @@ export default function PostDetail() {
           {title}
         </h1>
         <p className="mb-4 opacity-70 text-lg leading-relaxed mt-4">
-          &quotFinding Inspiration in Everyday Moments&quot explores the concept of
-          discovering creativity and motivation in the mundane aspects of daily
-          life. This title suggests that inspiration is not limited to grand
-          events or extraordinary circumstances but can be found in the ordinary
-          experiences that make up our day-to-day existence. The article may
-          delve into techniques for cultivating a mindset that allows
-          individuals to recognize and appreciate the beauty, insight, and
-          potential for innovation in the seemingly routine occurrences of life.
-          It could also offer practical tips or anecdotes to inspire readers to
-          seek out and embrace the hidden sources of inspiration that surround
-          them. Overall, the title hints at a narrative that celebrates the
-          power of mindfulness and perspective in uncovering inspiration in the
-          most unexpected places.
+          &quotFinding Inspiration in Everyday Moments&quot explores the concept
+          of discovering creativity and motivation in the mundane aspects of
+          daily life. This title suggests that inspiration is not limited to
+          grand events or extraordinary circumstances but can be found in the
+          ordinary experiences that make up our day-to-day existence. The
+          article may delve into techniques for cultivating a mindset that
+          allows individuals to recognize and appreciate the beauty, insight,
+          and potential for innovation in the seemingly routine occurrences of
+          life. It could also offer practical tips or anecdotes to inspire
+          readers to seek out and embrace the hidden sources of inspiration that
+          surround them. Overall, the title hints at a narrative that celebrates
+          the power of mindfulness and perspective in uncovering inspiration in
+          the most unexpected places.
         </p>
         <div className="mb-4">
           {image1 && (
@@ -83,16 +83,20 @@ export default function PostDetail() {
           )}
         </div>
         <p className="text-sm text-gray-500 mb-4 flex items-center">
-          <span className="mr-2">
+          <span className="mr-2 hover:text-white transition duration-300 ease-in-out cursor-pointer">
             by : <b>{author}</b>
           </span>
-          <span className="mr-2 flex items-center">
+          <span className="mr-2 flex items-center hover:text-white transition duration-300 ease-in-out cursor-pointer">
             <BiCalendar className="h-4 w-4 text-gray-500 mr-1" />
             {new Date(dateTime).toLocaleDateString()}
           </span>
-          <FiClock className="h-4 w-4 text-gray-500 mr-1" />
-          <span>{time}</span>
-          <span className="ml-4 capitalize">{category}</span>
+          <FiClock className="h-4 w-4 text-gray-500 mr-1 hover:text-white transition duration-300 ease-in-out cursor-pointer" />
+          <span className="hover:text-white transition duration-300 ease-in-out cursor-pointer">
+            {time}
+          </span>
+          <span className="ml-4 capitalize hover:text-white transition duration-300 ease-in-out cursor-pointer">
+            {category}
+          </span>
         </p>
         <div className="mb-4">
           <h4 className="text-3xl font-semibold leading-relaxed">
