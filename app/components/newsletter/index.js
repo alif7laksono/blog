@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Newsletter() {
   return (
-    <div className="w-full md:w-3/4 lg:w-3/4 mx-auto p-4 md:p-14 lg:px-20 sm:px-4 flex flex-col md:flex-row gap-4 mt-14 newsletter rounded-lg items-center">
+    <div className="w-full md:w-3/4 lg:w-3/4 mx-auto p-4 md:p-14 lg:px-20 sm:px-4 flex flex-col md:flex-row gap-4 mt-14 bg-sky-950 rounded-lg items-center">
       <div className="w-full md:w-1/2 lg:w-3/5 pr-10 text-center sm:text-left">
         <h1 className="text-2xl font-bold mb-2 sm:text-4xl">
           Subscribe to Porto newsletter and stay updated.
@@ -22,7 +22,7 @@ export default function Newsletter() {
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-black text-white rounded-lg transition-colors duration-200"
+            className="px-4 py-2 bg-sky-500 text-white rounded-lg transition-colors duration-200"
           >
             Subscribe
           </button>

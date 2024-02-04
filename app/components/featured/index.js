@@ -56,7 +56,7 @@ export default function Featured() {
                 />
               </div>
               <div className="w-2/3 px-4">
-                <p className="text-sm text-gray-500 cursor-pointer hover:text-white">
+                <p className="text-sm text-sky-500 font-bold cursor-pointer hover:text-white">
                   {post.category}
                 </p>
                 <h2 className="font-bold text-xl mt-1 cursor-pointer hover:opacity-90">

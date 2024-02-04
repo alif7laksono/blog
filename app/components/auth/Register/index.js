@@ -28,7 +28,7 @@ export default function Register() {
     <div className="">
       {!showLoginForm && !showForgotForm && (
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded w-full md:w-1/2 h-auto">
-          <h1 className="mb-4 text-3xl font-bold text-center">
+          <h1 className="mb-4 text-3xl font-bold text-center text-black">
             Create Your Account
           </h1>
           <p className="text-gray-600 text-center mb-4">

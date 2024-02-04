@@ -20,15 +20,13 @@ export default function RelatedPosts() {
                   alt=""
                   width={800}
                   height={200}
-                  layout="responsive"
-                  objectFit="cover"
                   className="rounded-lg hover:opacity-50"
                 />
               </div>
             </Link>
             <Link href="/PostDetail" rel="noopener noreferrer">
               <div className="flex-grow">
-                <h2 className="text-xl font-bold mb-2 mt-2 line-clamp-2 h-14 hover:transition ease-in-out duration-500 hover:opacity-50">
+                <h2 className="text-xl font-bold mb-2 mt-2 line-clamp-2 h-14 hover:transition ease-in-out duration-500 hover:text-sky-500">
                   {post.title}
                 </h2>
                 <p className="line-clamp-2 opacity-70 h-18">{post.content}</p>

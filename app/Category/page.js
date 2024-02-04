@@ -3,6 +3,7 @@ import Tags from "../db/Tags";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Category() {
   return (
@@ -15,21 +16,21 @@ export default function Category() {
           {Tags.map((tag) => (
             <div
               key={tag.id}
-              className="flex flex-col items-center shadow-lg cursor-pointer rounded-md bg-transparent hover:shadow-xl py-4 px-2 gradient-border relative hover:opacity-70 transition duration-300 ease-in-out" 
+              className="flex flex-col items-center shadow-lg cursor-pointer rounded-md bg-transparent hover:shadow-xl py-4 px-2 gradient-border relative hover:opacity-70 transition duration-300 ease-in-out"
             >
-              <Image
-                src={tag.image}
-                alt={tag.name}
-                width={310}
-                height={200}
-                className="rounded-md object-cover "
-              />
-              <h2 className="text-lg sm:text-xl md:text-xl font-semibold mb-2 capitalize mt-2">
-                {tag.name}
-              </h2>
-              <p className="text-sm text-gray-500">
-                Posts: {tag.totalPosts}
-              </p>
+              <Link href={`${tag.link}`}>
+                <Image
+                  src={tag.image}
+                  alt={tag.name}
+                  width={310}
+                  height={200}
+                  className="rounded-md object-cover"
+                />
+                <h2 className="text-lg sm:text-xl md:text-xl font-semibold mb-2 capitalize mt-2">
+                  {tag.name}
+                </h2>
+                <p className="text-sm text-gray-500">Posts: {tag.totalPosts}</p>
+              </Link>
             </div>
           ))}
         </div>

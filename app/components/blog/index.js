@@ -53,12 +53,12 @@ export default function Blog() {
 
       <div className="w-full flex justify-center space-x-4 mt-4">
         {visible === 6 && (
-          <button onClick={loadMore} className="px-4 py-2 gradient-button">
+          <button onClick={loadMore} className="px-4 py-2 bg-sky-500">
             Load More
           </button>
         )}
         {visible > 6 && (
-          <button onClick={showLess} className="px-4 py-2 gradient-button">
+          <button onClick={showLess} className="px-4 py-2 bg-sky-500">
             Show Less
           </button>
         )}

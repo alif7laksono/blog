@@ -51,7 +51,6 @@ export default function Header() {
 
   return (
     <header className="w-full md:w-4/5 lg:w-3/4 mx-auto flex justify-between items-center p-4 md:px-0">
-      {" "}
       <div className="">
         <Link href="/">
           <Image
@@ -84,7 +83,7 @@ export default function Header() {
           </button>
           <a
             onClick={toggleLoginForm}
-            className="gradient-button font-bold py-1 px-3 rounded-full mr-2 cursor-pointer"
+            className="bg-sky-500 font-semibold py-1 px-3 rounded-full mr-2 cursor-pointer text-sm"
           >
             Sign In
           </a>
@@ -156,7 +155,7 @@ export default function Header() {
               <li>
                 <a
                   href="/SinglePost"
-                  className="no-underline hover:text-accent text-current text-lg border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
+                  className="no-underline hover:text-sky-500 text-current text-lg border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
                 >
                   Single Post
                 </a>
@@ -164,7 +163,7 @@ export default function Header() {
               <li>
                 <a
                   href="/author/JohnDoe"
-                  className="no-underline hover:text-accent text-current text-lg border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
+                  className="no-underline hover:text-sky-500  text-current text-lg border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
                 >
                   Author Page
                 </a>
@@ -172,7 +171,7 @@ export default function Header() {
               <li>
                 <a
                   href="/category/Lifestyle"
-                  className="no-underline hover:text-accent text-current text-lg border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
+                  className="no-underline hover:text-sky-500  text-current text-lg border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
                 >
                   Category Page
                 </a>
@@ -180,7 +179,7 @@ export default function Header() {
               <li>
                 <a
                   onClick={toggleLoginForm}
-                  className="hover:text-accent text-xl cursor-pointer no-underline text-current border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
+                  className="hover:text-sky-500  text-xl cursor-pointer no-underline text-current border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
                 >
                   Login Page
                 </a>
@@ -194,10 +193,10 @@ export default function Header() {
                         e.preventDefault();
                         setIsOpen(!isOpen);
                       }}
-                      className="hover:text-accent text-xl cursor-pointer no-underline text-current border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
+                      className="hover:text-sky-500  text-xl cursor-pointer no-underline text-current border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
                     >
                       <div className="flex justify-between items-center">
-                        Dropdown
+                        Pages
                         <svg
                           className="h-5 w-5"
                           xmlns="http://www.w3.org/2000/svg"
@@ -224,25 +223,25 @@ export default function Header() {
                         aria-labelledby="options-menu"
                       >
                         <a
-                          href="#"
-                          className="block px-4 py-2 text-sm no-underline text-current hover:text-accent"
+                          href="/PostDetail"
+                          className="block px-4 py-2 text-sm no-underline text-current hover:text-sky-500 "
                           role="menuitem"
                         >
-                          Option 1
+                          Post Detail
                         </a>
                         <a
-                          href="#"
-                          className="block px-4 py-2 text-sm  no-underline text-current hover:text-accent"
+                          href="/Author"
+                          className="block px-4 py-2 text-sm  no-underline text-current hover:text-sky-500 "
                           role="menuitem"
                         >
-                          Option 2
+                          Authors
                         </a>
                         <a
-                          href="#"
-                          className="block px-4 py-2 text-sm  no-underline text-current hover:text-accent"
+                          href="/Category"
+                          className="block px-4 py-2 text-sm  no-underline text-current hover:text-sky-500 "
                           role="menuitem"
                         >
-                          Option 3
+                          Category
                         </a>
                       </div>
                     </div>

@@ -27,7 +27,9 @@ export default function LoginForm() {
     <div className="">
       {!showRegisterForm && !showForgotForm && (
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded w-full md:w-1/2 h-auto">
-          <h1 className="mb-6 text-3xl font-bold text-center font-sans">Welcome Back!</h1>
+          <h1 className="mb-6 text-3xl font-bold text-center font-sans text-black">
+            Welcome Back!
+          </h1>
           <form
             onSubmit={handleSubmit}
             className="w-full space-y-4 bg-white p-4 rounded"

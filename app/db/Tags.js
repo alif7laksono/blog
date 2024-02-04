@@ -4,6 +4,7 @@ const Tags = [
     name: "inspiration",
     description: "Inspiring content",
     image: "/images/posts/inspiration/image-1.jpg",
+    link: "/Category/inspiration",
     totalPosts: 10,
   },
   {
@@ -11,6 +12,7 @@ const Tags = [
     name: "nature",
     description: "Content about nature",
     image: "/images/posts/nature/image-1.jpg",
+    link: "/Category/nature",
     totalPosts: 8,
   },
   {
@@ -18,6 +20,7 @@ const Tags = [
     name: "health",
     description: "Health-related content",
     image: "/images/posts/health/image-1.jpg",
+    link: "/Category/health",
     totalPosts: 6,
   },
   {
@@ -25,6 +28,8 @@ const Tags = [
     name: "lifestyle",
     description: "Lifestyle content",
     image: "/images/posts/lifestyle/image-1.jpg",
+    link: "/Category/lifestyle",
+
     totalPosts: 8,
   },
   {
@@ -32,6 +37,7 @@ const Tags = [
     name: "travel",
     description: "Travel-related content",
     image: "/images/posts/travel/image-1.jpg",
+    link: "/Category/travel",
     totalPosts: 10,
   },
   {
@@ -39,6 +45,7 @@ const Tags = [
     name: "food",
     description: "Food-related content",
     image: "/images/posts/food/image-1.jpg",
+    link: "/Category/food",
     totalPosts: 16,
   },
   {
@@ -46,6 +53,7 @@ const Tags = [
     name: "technology",
     description: "Technology-related content",
     image: "/images/posts/technology/image-1.jpg",
+    link: "/Category/technology",
     totalPosts: 10,
   },
 ];

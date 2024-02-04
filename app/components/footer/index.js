@@ -64,7 +64,7 @@ export default function Footer() {
           <h2 className="font-bold text-lg col-span-full">Quick Links</h2>
           {links.map((link, index) => (
             <div key={index} className="mb-1">
-              <Link href={link.href} className="text-gray-500 hover:text-white">
+              <Link href={link.href} className="text-gray-500 hover:text-sky-500">
                 {link.text}
               </Link>
             </div>
