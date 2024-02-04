@@ -43,11 +43,11 @@ export default function Footer() {
             Welcome to Mezzaluna, a modern and sleek template for your website.
           </p>
 
-          <div className="mt-4">
-            <h2 className="font-bold text-lg mb-2 text-gray-500 text-center sm:text-left">
+          <div className="mt-10 lg:mt-8 md:mt-6 sm:mt-5">
+            <h2 className="font-bold text-lg mb-2 text-gray-500 text-center sm:text-left md:text-center lg:text-left">
               Follow Us
             </h2>
-            <div className="flex space-x-4">
+            <div className="flex justify-center md:justify-start space-x-4">
               {socialIcons.map((social, index) => {
                 const { Icon } = social;
                 return (
@@ -60,22 +60,17 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center">
-          <h2 className="font-bold text-lg mb-2">Quick Links</h2>
-          <ul>
-            {links.map((link, index) => (
-              <li key={index} className="mb-1">
-                <Link
-                  href={link.href}
-                  className="text-gray-500 hover:text-white"
-                >
-                  {link.text}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <div className="mt-4 sm:mt-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-1 gap-3 items-center justify-center text-center">
+          <h2 className="font-bold text-lg col-span-full">Quick Links</h2>
+          {links.map((link, index) => (
+            <div key={index} className="mb-1">
+              <Link href={link.href} className="text-gray-500 hover:text-white">
+                {link.text}
+              </Link>
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start text-center">
           <h2 className="font-bold text-lg mb-2">Contact Us</h2>
           <p className="text-center md:text-left text-gray-500">
             1234 Street Name, City Name, United States

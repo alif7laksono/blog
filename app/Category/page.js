@@ -15,20 +15,20 @@ export default function Category() {
           {Tags.map((tag) => (
             <div
               key={tag.id}
-              className="flex flex-col items-center shadow-lg cursor-pointer rounded-md bg-transparent hover:shadow-xl py-4 px-2 gradient-border relative"
+              className="flex flex-col items-center shadow-lg cursor-pointer rounded-md bg-transparent hover:shadow-xl py-4 px-2 gradient-border relative hover:opacity-70 transition duration-300 ease-in-out" 
             >
               <Image
                 src={tag.image}
                 alt={tag.name}
-                width={200}
+                width={310}
                 height={200}
-                className="rounded-md object-cover"
+                className="rounded-md object-cover "
               />
               <h2 className="text-lg sm:text-xl md:text-xl font-semibold mb-2 capitalize mt-2">
                 {tag.name}
               </h2>
               <p className="text-sm text-gray-500">
-                Total posts: {tag.totalPosts}
+                Posts: {tag.totalPosts}
               </p>
             </div>
           ))}

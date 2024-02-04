@@ -47,7 +47,7 @@ export default function Author() {
         {Authors.map((author) => (
           <div
             key={author.id}
-            className="flex flex-col items-center p-6 shadow-lg rounded-md transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:text-white hover:shadow-xl hover:scale-105"
+            className="flex flex-col items-center p-6 shadow-lg rounded-md bg-sky-950 bg-opacity-50 hover:text-white hover:shadow-xl hover:opacity-70 transition duration-300 ease-in-out"
           >
             <Image
               src={author.img}

@@ -10,22 +10,24 @@ export default function RelatedPosts() {
         {Posts.slice(0, 3).map((post, index) => (
           <div
             key={post.id}
-            className="cursor-pointer rounded-sm transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:bg-sky-900 hover:text-white p-2 flex flex-col"
+            className="cursor-pointer transition-colors duration-100 bg-sky-950 bg-opacity-50 hover:text-white p-2 flex flex-col rounded-lg"
           >
-            <div className=" overflow-hidden">
+            <div className="overflow-hidden h-48">
               <Image
                 src={post.images}
                 alt=""
                 width={800}
                 height={200}
                 layout="responsive"
+                objectFit="cover"
+                className="rounded-lg hover:opacity-50"
               />
             </div>
             <div className="flex-grow">
-              <h2 className="text-2xl font-bold mb-2 mt-2 line-clamp-2">
+              <h2 className="text-xl font-bold mb-2 mt-2 line-clamp-2 h-14 hover:transition ease-in-out duration-500 hover:opacity-50">
                 {post.title}
               </h2>
-              <p className="line-clamp-2 opacity-70 ">{post.content}</p>
+              <p className="line-clamp-2 opacity-70 h-18">{post.content}</p>
             </div>
           </div>
         ))}
