@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaFacebookF,
   FaTwitter,
@@ -49,6 +49,20 @@ export default function Header() {
     setShowRegisterForm(false);
   };
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setShowForm(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <header className="w-full md:w-4/5 lg:w-3/4 mx-auto flex justify-between items-center p-4 md:px-0">
       <div className="">
@@ -66,7 +80,7 @@ export default function Header() {
         <div className="flex items-center space-x-3 md:space-x-4">
           <button onClick={toggleForm} className="text-xl">
             <svg
-              className="w-3 h-3 md:w-3 md:h-3 sm:w-4 sm:h-4"
+              className="w-3 h-3 md:w-3 md:h-3 sm:w-4 sm:h-4 hover:text-gray-500 transition duration-200 ease-in-out "
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -89,32 +103,52 @@ export default function Header() {
           </a>
           {showForm && (
             <div
-              className="fixed top-0 right-0 w-full h-full flex items-start justify-center pt-20 bg-black bg-opacity-50"
+              className="fixed top-0 right-0 w-full h-full flex items-start justify-center pt-20 text-gray-500 bg-black bg-opacity-50"
               onClick={() => setShowForm(false)}
             >
               <form
-                className="bg-white p-2 rounded relative w-4/5 sm:w-1/2 md:w-3/3"
+                className="bg-sky-950 p-2 rounded relative w-4/5 sm:w-1/2 md:w-3/3"
                 onClick={(event) => event.stopPropagation()}
               >
-                <input
-                  type="text"
-                  className="border p-2 w-full pl-12 rounded-lg"
-                  placeholder="Search posts, tags, authors ..."
-                />
-                <svg
-                  className="w-4 h-4 absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-500 cursor-pointer"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                <div className="relative">
+                  <input
+                    type="text"
+                    className="p-2 w-full pl-12 rounded-lg bg-sky-950 outline-none"
+                    placeholder="Search posts, tags, authors ..."
                   />
-                </svg>
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer">
+                    Esc
+                  </div>
+                  <svg
+                    className="w-4 h-4 absolute top-1/2 left-2 transform -translate-y-1/2 text-gray-500 cursor-pointer"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </div>
+                <div className="mt-2 text-md text-gray-500 flex flex-col space-y-4">
+                  <span className="font-bold">Recent search:</span>
+                  <span className="cursor-pointer hover:text-white text-gray-400 ">
+                    Technology
+                  </span>
+                  <span className="cursor-pointer hover:text-white text-gray-400 ">
+                    Nature
+                  </span>
+                  <span className="cursor-pointer hover:text-white text-gray-400 ">
+                    Lifestyle
+                  </span>
+                  <span className="cursor-pointer hover:text-white text-gray-400 ">
+                    Health
+                  </span>
+                </div>
               </form>
             </div>
           )}
@@ -268,11 +302,11 @@ export default function Header() {
       {showLoginForm && (
         <div
           onClick={toggleLoginForm}
-          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-10"
+          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-sky-950 bg-opacity-50 z-10"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white p-4 rounded"
+            className="bg-sky-900 p-4 rounded"
           >
             <Login
               onRegisterClick={toggleRegisterForm}
