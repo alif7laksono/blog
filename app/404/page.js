@@ -13,7 +13,7 @@ export default function Page404() {
           <div className="text-center sm:text-left leading-relaxed">
             <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
             <p className="mb-8">
-              The page you're looking for might have been removed or is
+              The page you&aposre looking for might have been removed or is
               temporarily unavailable.
             </p>
           </div>
