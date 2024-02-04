@@ -56,19 +56,19 @@ export default function PostDetail() {
           {title}
         </h1>
         <p className="mb-4 opacity-70 text-lg leading-relaxed mt-4">
-          &quotFinding Inspiration in Everyday Moments&quot explores the concept
-          of discovering creativity and motivation in the mundane aspects of
-          daily life. This title suggests that inspiration is not limited to
-          grand events or extraordinary circumstances but can be found in the
-          ordinary experiences that make up our day-to-day existence. The
-          article may delve into techniques for cultivating a mindset that
-          allows individuals to recognize and appreciate the beauty, insight,
-          and potential for innovation in the seemingly routine occurrences of
-          life. It could also offer practical tips or anecdotes to inspire
-          readers to seek out and embrace the hidden sources of inspiration that
-          surround them. Overall, the title hints at a narrative that celebrates
-          the power of mindfulness and perspective in uncovering inspiration in
-          the most unexpected places.
+          &apos;Finding Inspiration in Everyday Moments&apos; explores the
+          concept of discovering creativity and motivation in the mundane
+          aspects of daily life. This title suggests that inspiration is not
+          limited to grand events or extraordinary circumstances but can be
+          found in the ordinary experiences that make up our day-to-day
+          existence. The article may delve into techniques for cultivating a
+          mindset that allows individuals to recognize and appreciate the
+          beauty, insight, and potential for innovation in the seemingly routine
+          occurrences of life. It could also offer practical tips or anecdotes
+          to inspire readers to seek out and embrace the hidden sources of
+          inspiration that surround them. Overall, the title hints at a
+          narrative that celebrates the power of mindfulness and perspective in
+          uncovering inspiration in the most unexpected places.
         </p>
         <div className="mb-4">
           {image1 && (

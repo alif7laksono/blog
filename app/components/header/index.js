@@ -58,15 +58,15 @@ export default function Header() {
             alt="Logo Image"
             width={180}
             height={50}
-            className="w-56 h-auto cursor-pointer"
+            className="w-36 h-auto cursor-pointer md:w-56 sm:w-46"
           />
         </Link>
       </div>
-      <div className="flex justify-between items-center space-x-5 ">
-        <div className="flex items-center space-x-4">
+      <div className="flex justify-between items-center space-x-3 md:space-x-4">
+        <div className="flex items-center space-x-3 md:space-x-4">
           <button onClick={toggleForm} className="text-xl">
             <svg
-              className="w-4 h-4 "
+              className="w-3 h-3 md:w-3 md:h-3 sm:w-4 sm:h-4"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -83,7 +83,7 @@ export default function Header() {
           </button>
           <a
             onClick={toggleLoginForm}
-            className="bg-sky-500 font-semibold py-1 px-3 rounded-full mr-2 cursor-pointer text-sm"
+            className="bg-sky-500 hover:bg-sky-400 transition duration-200 ease-in-out font-semibold py-1 px-3 rounded-full mr-2 cursor-pointer md:text-sm text-xs"
           >
             Sign In
           </a>

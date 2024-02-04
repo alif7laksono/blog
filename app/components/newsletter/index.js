@@ -22,7 +22,7 @@ export default function Newsletter() {
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-sky-500 text-white rounded-lg transition-colors duration-200"
+            className="px-4 py-2 bg-sky-500 hover:bg-sky-400 transition duration-200 ease-in-out text-white rounded-lg transition-colors duration-200"
           >
             Subscribe
           </button>

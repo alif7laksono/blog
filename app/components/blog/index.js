@@ -53,12 +53,18 @@ export default function Blog() {
 
       <div className="w-full flex justify-center space-x-4 mt-4">
         {visible === 6 && (
-          <button onClick={loadMore} className="px-4 py-2 bg-sky-500">
+          <button
+            onClick={loadMore}
+            className="px-4 py-2 bg-sky-500 hover:bg-sky-400 transition duration-200 ease-in-out rounded-md"
+          >
             Load More
           </button>
         )}
         {visible > 6 && (
-          <button onClick={showLess} className="px-4 py-2 bg-sky-500">
+          <button
+            onClick={showLess}
+            className="px-4 py-2 bg-sky-500 hover:bg-sky-400 transition duration-200 ease-in-out rounded-md"
+          >
             Show Less
           </button>
         )}

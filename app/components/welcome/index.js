@@ -14,7 +14,7 @@ export default function Welcome() {
         <span className="text-sky-500">newsletter</span>,{" "}
         <span className="text-sky-500">professional</span> and personal blogs.
       </p>
-      <button className="bg-sky-500 font-bold py-2 px-4 rounded-full mr-2">
+      <button className="bg-sky-500 hover:bg-sky-400 transition duration-200 ease-in-out font-bold py-2 px-4 rounded-full mr-2">
         Join Now - It&apos;s Free
       </button>
     </div>
