@@ -62,7 +62,7 @@ export default function Author() {
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
               {author.name}
             </h2>
-            <p className="text-center opacity-70 mb-4 text-md sm:text-sm md:text-base">
+            <p className="text-center opacity-70 mb-4 text-md sm:text-sm md:text-base h-20">
               {author.bio}
             </p>
             <div className="flex space-x-2 sm:space-x-3 md:space-x-4">
