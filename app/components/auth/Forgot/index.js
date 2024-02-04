@@ -25,30 +25,30 @@ export default function Forgot() {
   return (
     <div className="">
       {!showLoginForm && !showRegisterForm && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded w-full md:w-1/2 h-auto">
-          <h1 className="mb-4 text-3xl font-bold text-center text-black">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-sky-950 p-6 rounded w-full md:w-1/2 h-auto">
+          <h1 className="mb-4 text-3xl font-bold text-center text-white">
             Forgot Your Password?
           </h1>
-          <p className="text-gray-600 text-center w-3/4 mx-auto">
+          <p className="text-gray-200 text-center w-3/4 mx-auto">
             No worries, it happens to the best of us. Enter your email address
             below and we&apos;ll send you instructions on how to reset your
             password.
           </p>
           <form
             onSubmit={handleSubmit}
-            className="w-full space-y-6 bg-white p-6 rounded shadow-md"
+            className="w-full space-y-6 bg-sky-950 p-6 rounded"
           >
             <input
               type="email"
               placeholder="Your Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded"
+              className="w-full p-2 bg-sky-950 text-gray-500 border border-gray-300 rounded outline-none"
               required
             />
             <button
               type="submit"
-              className="w-full p-2 bg-black text-white rounded hover:bg-gray-700"
+              className="w-full p-2 bg-sky-500 text-white rounded hover:bg-sky-400"
             >
               Send Reset Instructions
             </button>
@@ -60,7 +60,7 @@ export default function Forgot() {
                 e.preventDefault();
                 toggleLoginForm();
               }}
-              className="text-gray-500 hover:text-gray-900 no-underline text-current italic flex items-center lg:mb-0"
+              className="text-gray-500 hover:text-white no-underline text-current italic flex items-center lg:mb-0"
             >
               <FaArrowLeft className="mr-2" />
               Back to Login
@@ -71,7 +71,7 @@ export default function Forgot() {
                 e.preventDefault();
                 toggleRegisterForm();
               }}
-              className="text-gray-500 hover:text-gray-900 no-underline text-current italic flex items-center"
+              className="text-gray-500 hover:text-white no-underline text-current italic flex items-center"
             >
               Create New Account
             </a>

@@ -302,7 +302,7 @@ export default function Header() {
       {showLoginForm && (
         <div
           onClick={toggleLoginForm}
-          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-sky-950 bg-opacity-50 z-10"
+          className="fixed top-0 left-0 w-full h-full flex items-center justify-center inset-0 bg-black bg-opacity-50 z-10"
         >
           <div
             onClick={(e) => e.stopPropagation()}
