@@ -6,7 +6,9 @@ import {
   FaInstagram,
   FaBars,
   FaTimes,
-  FaSignInAlt,
+  FaUser,
+  FaChevronDown,
+  FaChevronUp,
 } from "react-icons/fa";
 import Login from "../auth/Login";
 import Forgot from "../auth/Forgot";
@@ -22,6 +24,7 @@ export default function Header() {
   const [showForgotForm, setShowForgotForm] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleForm = () => {
     setShowForm(!showForm);
@@ -76,6 +79,59 @@ export default function Header() {
           />
         </Link>
       </div>
+      <div className="hidden md:hidden lg:flex font-sans">
+        <ul className="flex space-x-4">
+          <li className="hover:text-gray-400 transition ease-in-out duration-100">
+            <a href="/Category">Category</a>
+          </li>
+          <li className="hover:text-gray-400 transition ease-in-out duration-100">
+            <a href="/Author">Authors</a>
+          </li>
+          <li className="hover:text-gray-400 transition ease-in-out duration-100">
+            <a href="/PostDetail">Post Detail</a>
+          </li>
+          <li className="relative hover:text-gray-400 transition ease-in-out duration-100">
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="flex space-x-1 items-center"
+            >
+              <a href="#">Pages</a>
+              {dropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
+            </button>
+            {dropdownOpen && (
+              <div
+                className="absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-sky-950 ring-1 ring-black ring-opacity-5"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="options-menu"
+              >
+                <a
+                  href="/"
+                  className="block px-4 py-2 text-sm text-white hover:text-gray-400 transition duration-100 ease-in-out"
+                  role="menuitem"
+                >
+                  Home
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-sm text-white hover:bg-transparent hover:text-gray-400  transition duration-100 ease-in-out"
+                  role="menuitem"
+                >
+                  Login
+                </a>
+                <a
+                  href="#"
+                  className="block px-4 py-2 text-sm text-white hover:text-gray-400 transition duration-100 ease-in-out"
+                  role="menuitem"
+                >
+                  404 Page
+                </a>
+              </div>
+            )}
+          </li>
+        </ul>
+      </div>
+
       <div className="flex justify-between items-center space-x-3 md:space-x-4">
         <div className="flex items-center space-x-3 md:space-x-4">
           <button onClick={toggleForm} className="text-xl">
@@ -95,12 +151,14 @@ export default function Header() {
               />
             </svg>
           </button>
-          <a
+          <button
             onClick={toggleLoginForm}
-            className="bg-sky-500 hover:bg-sky-400 transition duration-200 ease-in-out font-semibold py-1 px-3 rounded-full mr-2 cursor-pointer md:text-sm text-xs"
+            className="transition duration-200 ease-in-out font-semibold cursor-pointer md:text-lg text-md"
+            title="Sign In"
           >
-            Sign In
-          </a>
+            <FaUser />
+          </button>
+
           {showForm && (
             <div
               className="fixed top-0 right-0 w-full h-full flex items-start justify-center pt-20 text-gray-500 bg-black bg-opacity-50"
@@ -284,15 +342,14 @@ export default function Header() {
               </li>
             </ul>
             <div className="fixed bottom-10 mt-auto">
-              <hr className="my-4 border-t-2 border-gray-200" />
               <div className="flex justify-between items-center">
                 <div className="mr-32">
                   <h3 className="text-lg font-bold ml-1">Follow Us</h3>
                 </div>
                 <div className="flex space-x-4">
-                  <FaFacebookF className=" hover:text-accent text-xl text-current" />
-                  <FaTwitter className=" hover:text-accent text-xl text-current" />
-                  <FaInstagram className="t hover:text-accent text-xl text-current" />
+                  <FaFacebookF className=" hover:text-sky-500 text-2xl text-current" />
+                  <FaTwitter className=" hover:text-sky-500 text-2xl text-current" />
+                  <FaInstagram className="t hover:text-sky-500 text-2xl text-current" />
                 </div>
               </div>
             </div>

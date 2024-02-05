@@ -18,7 +18,11 @@ export default function Category() {
               key={tag.id}
               className="flex flex-col items-center shadow-lg cursor-pointer rounded-md bg-transparent hover:shadow-xl py-4 px-2 gradient-border relative hover:opacity-70 transition duration-300 ease-in-out"
             >
-              <Link href={`${tag.link}`}>
+              <Link
+                href={`${tag.link}`}
+                target="_blank"
+                rel="noopene noreferrer"
+              >
                 <Image
                   src={tag.image}
                   alt={tag.name}
