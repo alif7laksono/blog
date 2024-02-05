@@ -27,12 +27,12 @@ export default function LoginForm() {
     <div className="">
       {!showRegisterForm && !showForgotForm && (
         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-sky-950 p-6 rounded w-full md:w-1/2 h-auto">
-          <h1 className="mb-6 text-3xl font-bold text-center text-white font-sans">
+          <h1 className="mb-4 text-3xl font-bold text-center text-white font-sans">
             Welcome Back!
           </h1>
           <form
             onSubmit={handleSubmit}
-            className="w-full space-y-4 bg-sky-950 p-4 rounded"
+            className="w-full space-y-1 bg-sky-950 px-4 py-1 rounded text-sm"
           >
             <input
               type="text"
@@ -57,16 +57,16 @@ export default function LoginForm() {
               Log In
             </button>
           </form>
-          <div className="flex flex-row md:flex-row justify-between w-full mb-3">
+          <div className="flex flex-row md:flex-row justify-between w-full mb-2">
             <a
               href="#"
               onClick={(e) => {
                 e.preventDefault();
                 toggleRegisterForm();
               }}
-              className="text-gray-500 px-4 hover:text-white no-underline text-current italic flex items-center"
+              className="text-gray-500 px-4 hover:text-white no-underline text-current italic flex items-center text-sm md:text-md"
             >
-              Create an Account
+              Register
             </a>
             <a
               href="#"
@@ -74,13 +74,13 @@ export default function LoginForm() {
                 e.preventDefault();
                 toggleForgotForm();
               }}
-              className="text-gray-500 px-4 hover:text-white no-underline text-current italic flex items-center"
+              className="text-gray-500 px-4 hover:text-white no-underline text-current italic flex items-center text-sm md:text-md"
             >
-              Forgot Password?
+              Forgot?
             </a>
           </div>
-          <p className="text-gray-500 text-center">Or continue with:</p>
-          <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 space-x-0 lg:space-x-4 mt-4 justify-center">
+          <p className="text-gray-500 text-center text-sm">Or continue with:</p>
+          <div className="flex flex-col lg:flex-row space-y-0 lg:space-y-0 space-x-0 lg:space-x-4 mt-2 justify-center text-sm px-2">
             <button className="p-2 bg-transparent text-white rounded flex items-center border border-transparent hover:border-sky-500 transition-all ease-out duration-200">
               <FaGoogle className="mr-2" />
               Continue with Google

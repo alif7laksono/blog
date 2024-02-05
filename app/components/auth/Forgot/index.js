@@ -30,13 +30,11 @@ export default function Forgot() {
             Forgot Your Password?
           </h1>
           <p className="text-gray-200 text-center w-3/4 mx-auto">
-            No worries, it happens to the best of us. Enter your email address
-            below and we&apos;ll send you instructions on how to reset your
-            password.
+            Enter your email to reset your password.
           </p>
           <form
             onSubmit={handleSubmit}
-            className="w-full space-y-6 bg-sky-950 p-6 rounded"
+            className="w-full space-y-2 bg-sky-950 px-6 py-4 rounded text-sm sm:text-md"
           >
             <input
               type="email"
@@ -50,10 +48,10 @@ export default function Forgot() {
               type="submit"
               className="w-full p-2 bg-sky-500 text-white rounded hover:bg-sky-400"
             >
-              Send Reset Instructions
+              Reset Password
             </button>
           </form>
-          <div className="flex flex-row justify-between w-full mt-4 md:mt-4">
+          <div className="flex flex-row justify-between w-full mt-0 sm:mt-2 md:mt-0 px-6 text-sm sm:text-md">
             <a
               href="#"
               onClick={(e) => {
@@ -63,7 +61,7 @@ export default function Forgot() {
               className="text-gray-500 hover:text-white no-underline text-current italic flex items-center lg:mb-0"
             >
               <FaArrowLeft className="mr-2" />
-              Back to Login
+              Login
             </a>
             <a
               href="#"
@@ -73,7 +71,7 @@ export default function Forgot() {
               }}
               className="text-gray-500 hover:text-white no-underline text-current italic flex items-center"
             >
-              Create New Account
+              Register
             </a>
           </div>
         </div>
