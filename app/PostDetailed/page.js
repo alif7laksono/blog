@@ -4,6 +4,7 @@ import Header from "../components/header";
 import Comment from "../components/comment";
 import RelatedPosts from "../components/related";
 import Image from "next/image";
+import Link from "next/link"; 
 import postDetailedData from "../db/PostDetailedData";
 import Authors from "../db/Authors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -43,7 +44,7 @@ export default function PostDetailed() {
                 />
                 <div>
                   <h2 className="text-xl md:text-lg sm:text-base font-semibold text-sky-500 cursor-pointer hover:text-sky-400">
-                    {Authors[4].name}
+                    <Link href="#">{Authors[4].name}</Link>
                   </h2>
                   <p className="text-sm text-gray-500">{Authors[4].bio}</p>
                 </div>

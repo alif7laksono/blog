@@ -12,8 +12,8 @@ import Image from "next/image";
 
 export default function Footer() {
   const links = [
-    { href: "/", text: "Home" },
-    { href: "/PostDetail", text: "Post Detail" },
+    { href: "/PostDetailed", text: "Post Detail" },
+    { href: "/PostDetail", text: "Post Detail 2" },
     { href: "/Author", text: "Authors" },
     { href: "/Category", text: "Category" },
     { href: "/404", text: "404" },

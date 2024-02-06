@@ -11,7 +11,7 @@ export default function Featured() {
   return (
     <section className="flex flex-col md:flex-row w-full md:w-4/5 lg:w-3/4 mx-auto py-5">
       <div className="w-full md:w-1/2 lg:w-1/2 h-full px-2 duration-100 bg-sky-950 bg-opacity-50 transform transition-transform rounded-lg">
-        <Link href="/PostDetail" rel="noopener noreferrer">
+        <Link href="/PostDetailed" rel="noopener noreferrer">
           <div className="rounded-lg overflow-hidden p-2">
             <Image
               src={mainPost.images}
@@ -40,7 +40,7 @@ export default function Featured() {
         </Link>
       </div>
       <div className="w-full md:w-1/2 lg:w-1/2 h-full px-2 mb-4 md:mb-0">
-        <Link href="/PostDetail" rel="noopener noreferrer">
+        <Link href="/PostDetailed" rel="noopener noreferrer">
           {sidePosts.map((post) => (
             <div
               key={post.id}

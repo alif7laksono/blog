@@ -23,7 +23,7 @@ export default function Blog() {
             key={index}
             className="rounded-lg bg-sky-950 bg-opacity-50 transform transition-transform duration-200 hover:text-white p-4 flex flex-col"
           >
-            <Link href="/PostDetail" rel="noopener noreferrer">
+            <Link href="/PostDetailed" rel="noopener noreferrer">
               <Image
                 src={post.images}
                 alt={post.title}
@@ -39,9 +39,13 @@ export default function Blog() {
                   {post.content}
                 </p>
                 <div className="mt-2 text-sm text-gray-500 h-8">
-                  <span>{post.category}</span>
+                  <span className="cursor-pointer hover:text-sky-500">
+                    {post.category}
+                  </span>
                   <span className="mx-2">|</span>
-                  <span>{post.author}</span>
+                  <span className="cursor-pointer hover:text-sky-500">
+                    {post.author}
+                  </span>
                   <span className="mx-2">|</span>
                   <span>{post.time}</span>
                 </div>

@@ -322,11 +322,18 @@ export default function Header() {
                         aria-labelledby="options-menu"
                       >
                         <a
-                          href="/PostDetail"
+                          href="/PostDetailed"
                           className="block px-4 py-2 text-sm no-underline text-current hover:text-sky-500 "
                           role="menuitem"
                         >
                           Post Detail
+                        </a>
+                        <a
+                          href="/PostDetail"
+                          className="block px-4 py-2 text-sm no-underline text-current hover:text-sky-500 "
+                          role="menuitem"
+                        >
+                          Post Detail 2
                         </a>
                         <a
                           href="/Author"
