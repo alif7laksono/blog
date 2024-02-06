@@ -82,22 +82,7 @@ export default function PostDetail() {
             />
           )}
         </div>
-        <p className="text-sm text-gray-500 mb-4 flex items-center">
-          <span className="mr-2 hover:text-white transition duration-300 ease-in-out cursor-pointer">
-            by : <b>{author}</b>
-          </span>
-          <span className="mr-2 flex items-center hover:text-white transition duration-300 ease-in-out cursor-pointer">
-            <BiCalendar className="h-4 w-4 text-gray-500 mr-1" />
-            {new Date(dateTime).toLocaleDateString()}
-          </span>
-          <FiClock className="h-4 w-4 text-gray-500 mr-1 hover:text-white transition duration-300 ease-in-out cursor-pointer" />
-          <span className="hover:text-white transition duration-300 ease-in-out cursor-pointer">
-            {time}
-          </span>
-          <span className="ml-4 capitalize hover:text-white transition duration-300 ease-in-out cursor-pointer">
-            {category}
-          </span>
-        </p>
+        
         <div className="mb-4">
           <h4 className="text-3xl font-semibold leading-relaxed">
             {description}
@@ -244,20 +229,22 @@ export default function PostDetail() {
                 key={index}
                 className="mb-4 p-4 rounded-md  shadow flex items-start"
               >
-                <div>
+                <div className="w-1/4 md:w-14">
                   <Image
                     src={comment.image}
                     alt={comment.author}
                     width={800}
                     height={500}
-                    className="w-12 h-12 rounded-full"
+                    className="w-16 h-16 rounded-full"
                   />
                 </div>
-                <div className="ml-4 flex-grow flex flex-col justify-between">
+                <div className="ml-4 flex-grow flex flex-col justify-between w-3/4">
                   <div>
                     <p className="font-bold">{comment.author}</p>
                     <p className="opacity-60 text-sm">{comment.date}</p>
-                    <p className="opacity-80 text-md mb-2">{comment.comment}</p>
+                    <p className="opacity-80 text-md mb-2 line-clamp-2">
+                      {comment.comment}
+                    </p>
                   </div>
                   <div className="text-right">
                     <button

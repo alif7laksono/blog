@@ -82,13 +82,13 @@ export default function Header() {
       <div className="hidden md:hidden lg:flex font-sans">
         <ul className="flex space-x-4">
           <li className="hover:text-gray-400 transition ease-in-out duration-100">
-            <a href="/Category">Category</a>
+            <a href="/Category/inspiration">Category</a>
           </li>
           <li className="hover:text-gray-400 transition ease-in-out duration-100">
-            <a href="/Author">Authors</a>
+            <a href="/Author/JohnDoe">Authors</a>
           </li>
           <li className="hover:text-gray-400 transition ease-in-out duration-100">
-            <a href="/PostDetail">Post Detail</a>
+            <a href="/PostDetailed">Post Detail</a>
           </li>
           <li className="relative hover:text-gray-400 transition ease-in-out duration-100">
             <button
@@ -120,7 +120,14 @@ export default function Header() {
                   Login
                 </a>
                 <a
-                  href="#"
+                  href="/PostDetail"
+                  className="block px-4 py-2 text-sm text-white hover:bg-transparent hover:text-gray-400  transition duration-100 ease-in-out"
+                  role="menuitem"
+                >
+                  Post Detail 2
+                </a>
+                <a
+                  href="404"
                   className="block px-4 py-2 text-sm text-white hover:text-gray-400 transition duration-100 ease-in-out"
                   role="menuitem"
                 >
@@ -161,7 +168,7 @@ export default function Header() {
 
           {showForm && (
             <div
-              className="fixed top-0 right-0 w-full h-full flex items-start justify-center pt-20 text-gray-500 bg-black bg-opacity-50"
+              className="fixed top-0 right-0 w-full h-full flex items-start justify-center pt-20 text-gray-500 bg-black bg-opacity-50 z-50"
               onClick={() => setShowForm(false)}
             >
               <form

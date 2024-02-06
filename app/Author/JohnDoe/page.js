@@ -4,10 +4,8 @@ import Footer from "../../components/footer";
 import Posts from "../../db/Posts";
 import Image from "next/image";
 
-export default function InspirationPage() {
-  const inspirationPosts = Posts.filter(
-    (post) => post.category === "Inspiration"
-  );
+export default function JohnDoePage() {
+  const inspirationPosts = Posts.filter((post) => post.author === "John Doe");
   return (
     <>
       <Header />
@@ -15,9 +13,7 @@ export default function InspirationPage() {
         <div className="flex flex-col md:flex-row md:space-x-4 mx-auto w-full md:w-4/5 lg:w-3/4">
           {/* left side */}
           <div className="w-full md:w-2/3 p-4 md:px-0 sm:px-0 px-0">
-            <h2 className="text-xl md:text-2xl font-bold mb-4">
-              Inspiration Posts
-            </h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-4">John Doe</h2>
             {inspirationPosts.slice(0, 4).map((post, index) => (
               <div
                 key={index}
@@ -27,7 +23,6 @@ export default function InspirationPage() {
                   <Image
                     src={post.images}
                     alt={post.alt}
-                    layout="responsive"
                     width={500}
                     height={335}
                     className="rounded-lg object-cover cursor-pointer hover:opacity-80 transition ease-in-out duration-150"

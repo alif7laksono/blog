@@ -25,7 +25,7 @@ export default function Forgot() {
   return (
     <div className="">
       {!showLoginForm && !showRegisterForm && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-sky-950 p-6 rounded w-full md:w-1/2 h-auto">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-sky-950 p-6 rounded w-full md:w-2/3 lg:w-1/3 h-auto">
           <h1 className="mb-4 text-3xl font-bold text-center text-white">
             Forgot Your Password?
           </h1>

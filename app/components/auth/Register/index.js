@@ -27,7 +27,7 @@ export default function Register() {
   return (
     <div className="">
       {!showLoginForm && !showForgotForm && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-sky-950 py-4 px-16 rounded w-full md:w-1/2 h-auto">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-sky-950 py-4 px-16 rounded w-full md:w-2/3 lg:w-1/3 h-auto">
           <h1 className="mb-4 text-3xl font-bold text-center text-white capitalize">
             Join our community today!
           </h1>
@@ -81,15 +81,15 @@ export default function Register() {
           <div className="flex flex-col lg:flex-row space-y-0 lg:space-y-0 space-x-0 lg:space-x-4 mt-2 justify-center text-sm">
             <button className="p-2 bg-transparent text-white rounded flex items-center border border-transparent hover:border-sky-500 transition-all ease-out duration-200">
               <FaGoogle className="mr-2" />
-              Continue with Google
+              Google
             </button>
             <button className="p-2 bg-transparent text-white rounded flex items-center border border-transparent hover:border-sky-500 transition-all ease-out duration-200">
               <FaFacebookF className="mr-2" />
-              Continue with Facebook
+              Facebook
             </button>
             <button className="p-2 bg-transparent text-white rounded flex items-center border border-transparent hover:border-sky-500 transition-all ease-out duration-200">
               <FaTiktok className="mr-2" />
-              Continue with TikTok
+              TikTok
             </button>
           </div>
         </div>

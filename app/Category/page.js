@@ -16,7 +16,7 @@ export default function Category() {
           {Tags.map((tag) => (
             <div
               key={tag.id}
-              className="flex flex-col items-center shadow-lg cursor-pointer rounded-md bg-transparent hover:shadow-xl py-4 px-2 gradient-border relative hover:opacity-70 transition duration-300 ease-in-out"
+              className="flex flex-col items-center text-center shadow-lg cursor-pointer rounded-md bg-transparent hover:shadow-xl py-4 px-2 gradient-border relative hover:opacity-70 transition duration-300 ease-in-out"
             >
               <Link
                 href={`${tag.link}`}
@@ -30,10 +30,10 @@ export default function Category() {
                   height={200}
                   className="rounded-md object-cover"
                 />
-                <h2 className="text-lg sm:text-xl md:text-xl font-semibold mb-2 capitalize mt-2">
+                <h2 className="text-lg sm:text-xl md:text-xl font-semibold mb-2 capitalize mt-2 h-8">
                   {tag.name}
                 </h2>
-                <p className="text-sm text-gray-500">Posts: {tag.totalPosts}</p>
+                <p className="text-sm text-gray-500 h-10">Posts: {tag.totalPosts}</p>
               </Link>
             </div>
           ))}

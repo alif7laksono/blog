@@ -10,6 +10,7 @@ import {
   FaInstagram,
   FaLink,
 } from "react-icons/fa";
+import Link from "next/link";
 
 const socialMedia = [
   {
@@ -49,19 +50,31 @@ export default function Author() {
             key={author.id}
             className="flex flex-col items-center p-6 shadow-lg rounded-md bg-sky-950 bg-opacity-50 hover:text-white hover:shadow-xl hover:opacity-70 transition duration-300 ease-in-out"
           >
-            <Image
-              src={author.img}
-              alt={author.name}
-              width={800}
-              height={500}
-              className="w-24 h-24 rounded-full"
-            />
+            <Link
+              href="/Author/JohnDoe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={author.img}
+                alt={author.name}
+                width={800}
+                height={500}
+                className="w-24 h-24 rounded-full"
+              />
+            </Link>
             <span className="capitalize mt-2 opacity-60 text-sm sm:text-sm md:text-base">
               {author.posts} posts
             </span>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
-              {author.name}
-            </h2>
+            <Link
+              href="/Author/JohnDoe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">
+                {author.name}
+              </h2>
+            </Link>
             <p className="text-center opacity-70 mb-4 text-md sm:text-sm md:text-base h-20">
               {author.bio}
             </p>

@@ -11,7 +11,7 @@ const Tags = [
     id: 2,
     name: "nature",
     description: "Content about nature",
-    image: "/images/posts/nature/image-1.jpg",
+    image: "/images/posts/nature/image-2.jpg",
     link: "/Category/nature",
     totalPosts: 8,
   },

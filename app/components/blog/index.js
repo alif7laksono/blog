@@ -38,7 +38,7 @@ export default function Blog() {
                 <p className="line-clamp-2 opacity-70 transition duration-300 ease-in-out">
                   {post.content}
                 </p>
-                <div className="mt-2 text-sm text-gray-500">
+                <div className="mt-2 text-sm text-gray-500 h-8">
                   <span>{post.category}</span>
                   <span className="mx-2">|</span>
                   <span>{post.author}</span>

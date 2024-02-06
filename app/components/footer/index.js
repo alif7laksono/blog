@@ -53,7 +53,7 @@ export default function Footer() {
                 return (
                   <Icon
                     key={index}
-                    className="w-5 h-5 cursor-pointer text-gray-500 hover:text-white"
+                    className="w-5 h-5 cursor-pointer text-gray-500 hover:text-sky-500"
                   />
                 );
               })}
