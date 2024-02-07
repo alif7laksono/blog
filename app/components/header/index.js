@@ -67,7 +67,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="w-full md:w-4/5 lg:w-3/4 mx-auto flex justify-between items-center p-4 md:px-0">
+    <header className="w-full md:w-4/5 lg:w-3/4 p-4 md:px-0 mx-auto flex justify-between items-center">
       <div className="">
         <Link href="/">
           <Image
@@ -106,18 +106,19 @@ export default function Header() {
                 aria-labelledby="options-menu"
               >
                 <a
-                  href="/"
+                  href="/Contact"
                   className="block px-4 py-2 text-sm text-white hover:text-gray-400 transition duration-100 ease-in-out"
                   role="menuitem"
                 >
-                  Home
+                  Contact
                 </a>
                 <a
                   href="#"
                   className="block px-4 py-2 text-sm text-white hover:bg-transparent hover:text-gray-400  transition duration-100 ease-in-out"
                   role="menuitem"
+                  onClick={toggleLoginForm}
                 >
-                  Login
+                  Login Pop Up
                 </a>
                 <a
                   href="/PostDetail"
@@ -253,7 +254,7 @@ export default function Header() {
             <ul className="space-y-4 ml-3">
               <li>
                 <a
-                  href="/SinglePost"
+                  href="/PostDetailed"
                   className="no-underline hover:text-sky-500 text-current text-lg border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
                 >
                   Single Post
@@ -261,7 +262,7 @@ export default function Header() {
               </li>
               <li>
                 <a
-                  href="/author/JohnDoe"
+                  href="/Author/JohnDoe"
                   className="no-underline hover:text-sky-500  text-current text-lg border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
                 >
                   Author Page
@@ -269,7 +270,7 @@ export default function Header() {
               </li>
               <li>
                 <a
-                  href="/category/Lifestyle"
+                  href="/Category/inspiration"
                   className="no-underline hover:text-sky-500  text-current text-lg border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
                 >
                   Category Page
