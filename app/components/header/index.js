@@ -278,6 +278,14 @@ export default function Header() {
               </li>
               <li>
                 <a
+                  href="/Contact"
+                  className="no-underline hover:text-sky-500  text-current text-lg border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
+                >
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a
                   onClick={toggleLoginForm}
                   className="hover:text-sky-500  text-xl cursor-pointer no-underline text-current border-b border-t-0 border-r-0 border-l-0 pb-2 w-full block"
                 >

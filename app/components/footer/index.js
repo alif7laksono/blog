@@ -16,6 +16,7 @@ export default function Footer() {
     { href: "/PostDetail", text: "Post Detail 2" },
     { href: "/Author", text: "Authors" },
     { href: "/Category", text: "Category" },
+    { href: "/Contact", text: "Contact" },
     { href: "/404", text: "404" },
   ];
 
